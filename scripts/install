@@ -43,7 +43,7 @@ ynh_secure_remove --file="$install_dir/.cache/"
 ynh_secure_remove --file="$install_dir/go/"
 ynh_secure_remove --file="$install_dir/.go-version"
 
-#chmod +x "$install_dir/"
+chmod +x "$install_dir/vore"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -54,9 +54,9 @@ ynh_script_progression --message="Adding system configurations related to $app..
 ynh_add_nginx_config
 
 # Create a dedicated systemd config
-#ynh_add_systemd_config
+ynh_add_systemd_config
 
-#yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
 
 #=================================================
 # GENERIC FINALIZATION
@@ -66,7 +66,7 @@ ynh_add_nginx_config
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 # Start a systemd service
-#ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
 
 #=================================================
 # END OF SCRIPT
