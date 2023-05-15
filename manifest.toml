@@ -13,7 +13,7 @@ maintainers = ["johndoe"]
 license = "free"
 website = "https://vore.website"
 demo = "https://vore.website/j3s"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://j3s.sh/thought/vore-a-new-rss-feed-reader.html"
 userdoc = "https://yunohost.org/apps"
 code = "https://some.forge.com/example/example"
 
