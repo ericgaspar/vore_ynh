@@ -33,10 +33,11 @@ ynh_script_progression --message="Building app..." --weight=1
 ynh_exec_warn_less ynh_install_go --go_version=$go_version
 ynh_use_go
 
-#pushd $install_dir
+pushd $install_dir
 	#ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go run .
-	#ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go build -o $install_dir/
-#popd
+	ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go build -o $install_dir/
+	#ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go install -o $install_dir/
+popd
 
 #ynh_remove_go
 #ynh_secure_remove --file="$install_dir/build/"
@@ -44,7 +45,7 @@ ynh_use_go
 #ynh_secure_remove --file="$install_dir/go/"
 #ynh_secure_remove --file="$install_dir/.go-version"
 
-#chmod +x "$install_dir/vore"
+chmod +x "$install_dir/vore"
 
 #=================================================
 # SYSTEM CONFIGURATION
