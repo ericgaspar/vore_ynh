@@ -3,9 +3,9 @@ packaging_format = 2
 id = "vore"
 name = "Vore"
 description.en = "Simple, multi-tenant feed reader"
-description.fr = "Fimple, multi-tenant feed reader"
+description.fr = "Lecteur de flux simple et multi-utilisateurs"
 
-version = "1.0~ynh1"
+version = "2023.05.15~ynh1"
 
 maintainers = [""]
 
